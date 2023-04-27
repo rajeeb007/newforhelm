@@ -5,7 +5,7 @@ pipeline {
     }
     stages{
         stage('git checkout'){
-            step{
+            steps{
                 git branch: 'main', credentialsId: 'git_key', url: 'https://github.com/rajeeb007/newforhelm.git'
             }
         }
