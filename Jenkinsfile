@@ -26,6 +26,24 @@ pipeline {
                
             }
 
+        }
+        stage('Login') {
+
+            steps {
+
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+
+            }
+
+        }
+        stage('pushing to docker hub') {
+
+            steps {
+
+                sh 'docker push rajeeb007/for_helm'
+
+            }
+
         }    
 
     }
