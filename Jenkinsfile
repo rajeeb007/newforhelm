@@ -40,7 +40,7 @@ pipeline {
 
             steps {
 
-                sh 'docker push rajeeb007/for_helm'
+                sh 'docker push rajeeb007/for_helm:1.1'
 
             }
 
